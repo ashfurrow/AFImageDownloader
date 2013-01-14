@@ -16,9 +16,11 @@ typedef enum : NSUInteger {
 
 @interface AFImageDownloader : NSObject
 
-+(instancetype)imageDownloaderWithURLString:(NSString *)urlString;
++(instancetype)imageDownloaderWithURLString:(NSString *)urlString;  // Defaults to not starting immediately
++(instancetype)imageDownloaderWithURLString:(NSString *)urlString autoStart:(BOOL)startImmediately;
 
--(id)initWithURLString:(NSString *)urlString;
+-(id)initWithURLString:(NSString *)urlString;  // Defaults to not starting immediately
+-(id)initWithURLString:(NSString *)urlString autoStart:(BOOL)startImmediately;
 
 @property (nonatomic, readonly) NSString *urlString;
 

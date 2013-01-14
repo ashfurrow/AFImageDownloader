@@ -10,6 +10,12 @@
 
 #import "AFImageDownloader.h"
 
+@interface AFImageDownloader (UnitTestAdditions)
+
+-(void)start;
+
+@end
+
 SPEC_BEGIN(AFImageDownloaderInitializationTests)
 
 describe(@"Image Downloader", ^{
@@ -30,6 +36,11 @@ describe(@"Image Downloader", ^{
             [[theValue(imageDownloader.state) should] equal:@(AFImageDownloaderStateNotStarted)];
         });
         
+        it (@"should be started after being started", ^{
+            [imageDownloader start];
+            [[theValue(imageDownloader.state) should] equal:@(AFImageDownloaderStateStarted)];
+        });
+        
     });
     
     context(@"when newly created with initializer method", ^{
@@ -47,6 +58,10 @@ describe(@"Image Downloader", ^{
             [[theValue(imageDownloader.state) should] equal:@(AFImageDownloaderStateNotStarted)];
         });
         
+        it (@"should be started after being started", ^{
+            [imageDownloader start];
+            [[theValue(imageDownloader.state) should] equal:@(AFImageDownloaderStateStarted)];
+        });
     });
 });
 

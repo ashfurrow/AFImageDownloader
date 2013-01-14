@@ -10,19 +10,46 @@
 
 @implementation AFImageDownloader
 
+#pragma mark - Class Creation Methods
+
 +(instancetype)imageDownloaderWithURLString:(NSString *)urlString
 {
-    return [[AFImageDownloader alloc] initWithURLString:urlString];
+    return [self imageDownloaderWithURLString:urlString autoStart:NO];
 }
 
--(id)initWithURLString:(NSString *)urlString
++(instancetype)imageDownloaderWithURLString:(NSString *)urlString autoStart:(BOOL)startImmediately
+{
+    return [[AFImageDownloader alloc] initWithURLString:urlString autoStart:startImmediately];
+}
+
+#pragma mark - Initializers
+
+-(id)initWithURLString:(NSString *)urlString autoStart:(BOOL)startImmediately
 {
     if (!(self = [super init])) return nil;
     
     _urlString = urlString;
     _state = AFImageDownloaderStateNotStarted;
     
+    if (startImmediately)
+    {
+        [self start];
+    }
+    
     return self;
+}
+
+-(id)initWithURLString:(NSString *)urlString
+{
+    return [self initWithURLString:urlString autoStart:NO];
+}
+
+#pragma mark - Private Helper Methods
+-(void)start
+{
+    [self willChangeValueForKey:@"state"];
+    _state = AFImageDownloaderStateStarted;
+    [self didChangeValueForKey:@"state"];
 }
 
 @end
