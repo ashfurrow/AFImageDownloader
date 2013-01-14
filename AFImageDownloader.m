@@ -73,4 +73,21 @@
     [self didChangeValueForKey:@"state"];
 }
 
+#pragma mark - NSURLConnectionDataDelegate Methods
+
+-(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    
+}
+
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    
+}
+
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    
+}
+
 @end
