@@ -26,6 +26,7 @@
 		5EC5BC8516A48BFB008FE202 /* AFImageDownloaderInitializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC8416A48BFB008FE202 /* AFImageDownloaderInitializationTests.m */; };
 		5EC5BC8816A48D47008FE202 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC8716A48D47008FE202 /* AFImageDownloader.m */; };
 		5EC5BC8916A48D47008FE202 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC8716A48D47008FE202 /* AFImageDownloader.m */; };
+		5EC5BC8C16A49590008FE202 /* AFImageDownloaderStartingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC8A16A49590008FE202 /* AFImageDownloaderStartingTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		5EC5BC8416A48BFB008FE202 /* AFImageDownloaderInitializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloaderInitializationTests.m; sourceTree = "<group>"; };
 		5EC5BC8616A48D47008FE202 /* AFImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = ../AFImageDownloader.h; sourceTree = "<group>"; };
 		5EC5BC8716A48D47008FE202 /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = ../AFImageDownloader.m; sourceTree = "<group>"; };
+		5EC5BC8A16A49590008FE202 /* AFImageDownloaderStartingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloaderStartingTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				5EC5BC8416A48BFB008FE202 /* AFImageDownloaderInitializationTests.m */,
+				5EC5BC8A16A49590008FE202 /* AFImageDownloaderStartingTests.m */,
 				5EC5BC6F16A48B90008FE202 /* Supporting Files */,
 			);
 			path = AFImageDownloaderTests;
@@ -293,6 +296,7 @@
 			files = (
 				5EC5BC8516A48BFB008FE202 /* AFImageDownloaderInitializationTests.m in Sources */,
 				5EC5BC8916A48D47008FE202 /* AFImageDownloader.m in Sources */,
+				5EC5BC8C16A49590008FE202 /* AFImageDownloaderStartingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,10 @@
 
 #import "AFImageDownloader.h"
 
+@interface AFImageDownloader () <NSURLConnectionDataDelegate>
+
+@end
+
 @implementation AFImageDownloader
 
 #pragma mark - Class Creation Methods
@@ -45,8 +49,25 @@
 }
 
 #pragma mark - Private Helper Methods
+
+-(NSURLConnection *)urlConnectionForURLRequest:(NSURLRequest *)request
+{
+    return [NSURLConnection connectionWithRequest:request delegate:self];
+}
+
+-(NSURLRequest *)urlRequestForURLString
+{
+    return [NSURLRequest requestWithURL:[NSURL URLWithString:self.urlString]];
+}
+
+#pragma mark - Public Methods
+
 -(void)start
 {
+    NSURLRequest *urlRequest = [self urlRequestForURLString];
+    NSURLConnection *connection = [self urlConnectionForURLRequest:urlRequest];
+    [connection start];
+    
     [self willChangeValueForKey:@"state"];
     _state = AFImageDownloaderStateStarted;
     [self didChangeValueForKey:@"state"];

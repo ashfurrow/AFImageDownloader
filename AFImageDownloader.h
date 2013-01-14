@@ -16,14 +16,23 @@ typedef enum : NSUInteger {
 
 @interface AFImageDownloader : NSObject
 
+#pragma mark - Convenience Class Creation Methods
+
 +(instancetype)imageDownloaderWithURLString:(NSString *)urlString;  // Defaults to not starting immediately
 +(instancetype)imageDownloaderWithURLString:(NSString *)urlString autoStart:(BOOL)startImmediately;
 
+#pragma mark - Initializer Methods
+
 -(id)initWithURLString:(NSString *)urlString;  // Defaults to not starting immediately
--(id)initWithURLString:(NSString *)urlString autoStart:(BOOL)startImmediately;
+-(id)initWithURLString:(NSString *)urlString autoStart:(BOOL)startImmediately; // Designated initializer
+
+#pragma mark - Instance Methods
+
+-(void)start;
+
+#pragma mark - Properties
 
 @property (nonatomic, readonly) NSString *urlString;
-
 @property (nonatomic, readwrite) AFImageDownloaderState state;
 
 @end

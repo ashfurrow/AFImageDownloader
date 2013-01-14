@@ -10,12 +10,6 @@
 
 #import "AFImageDownloader.h"
 
-@interface AFImageDownloader (UnitTestAdditions)
-
--(void)start;
-
-@end
-
 SPEC_BEGIN(AFImageDownloaderInitializationTests)
 
 describe(@"Image Downloader", ^{
