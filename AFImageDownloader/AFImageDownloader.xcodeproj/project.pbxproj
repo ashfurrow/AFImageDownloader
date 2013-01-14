@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5EC5BC4516A48B8F008FE202 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC5BC4416A48B8F008FE202 /* UIKit.framework */; };
+		5EC5BC4716A48B8F008FE202 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC5BC4616A48B8F008FE202 /* Foundation.framework */; };
+		5EC5BC4916A48B8F008FE202 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC5BC4816A48B8F008FE202 /* CoreGraphics.framework */; };
+		5EC5BC4F16A48B8F008FE202 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EC5BC4D16A48B8F008FE202 /* InfoPlist.strings */; };
+		5EC5BC5116A48B8F008FE202 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC5016A48B8F008FE202 /* main.m */; };
+		5EC5BC5516A48B8F008FE202 /* AFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC5416A48B8F008FE202 /* AFAppDelegate.m */; };
+		5EC5BC5716A48B90008FE202 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC5BC5616A48B90008FE202 /* Default.png */; };
+		5EC5BC5916A48B90008FE202 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC5BC5816A48B90008FE202 /* Default@2x.png */; };
+		5EC5BC5B16A48B90008FE202 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC5BC5A16A48B90008FE202 /* Default-568h@2x.png */; };
+		5EC5BC5E16A48B90008FE202 /* AFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC5D16A48B90008FE202 /* AFViewController.m */; };
+		5EC5BC6116A48B90008FE202 /* AFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EC5BC5F16A48B90008FE202 /* AFViewController.xib */; };
+		5EC5BC6916A48B90008FE202 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC5BC6816A48B90008FE202 /* SenTestingKit.framework */; };
+		5EC5BC6A16A48B90008FE202 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC5BC4416A48B8F008FE202 /* UIKit.framework */; };
+		5EC5BC6B16A48B90008FE202 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC5BC4616A48B8F008FE202 /* Foundation.framework */; };
+		5EC5BC7316A48B90008FE202 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EC5BC7116A48B90008FE202 /* InfoPlist.strings */; };
+		5EC5BC8316A48BD9008FE202 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC5BC8216A48BD9008FE202 /* libKiwi.a */; };
+		5EC5BC8516A48BFB008FE202 /* AFImageDownloaderInitializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC8416A48BFB008FE202 /* AFImageDownloaderInitializationTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5EC5BC6C16A48B90008FE202 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EC5BC3716A48B8F008FE202 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EC5BC3F16A48B8F008FE202;
+			remoteInfo = AFImageDownloader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5EC5BC4016A48B8F008FE202 /* AFImageDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFImageDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EC5BC4416A48B8F008FE202 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5EC5BC4616A48B8F008FE202 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5EC5BC4816A48B8F008FE202 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5EC5BC4C16A48B8F008FE202 /* AFImageDownloader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AFImageDownloader-Info.plist"; sourceTree = "<group>"; };
+		5EC5BC4E16A48B8F008FE202 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5EC5BC5016A48B8F008FE202 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5EC5BC5216A48B8F008FE202 /* AFImageDownloader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFImageDownloader-Prefix.pch"; sourceTree = "<group>"; };
+		5EC5BC5316A48B8F008FE202 /* AFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFAppDelegate.h; sourceTree = "<group>"; };
+		5EC5BC5416A48B8F008FE202 /* AFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFAppDelegate.m; sourceTree = "<group>"; };
+		5EC5BC5616A48B90008FE202 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5EC5BC5816A48B90008FE202 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5EC5BC5A16A48B90008FE202 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5EC5BC5C16A48B90008FE202 /* AFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFViewController.h; sourceTree = "<group>"; };
+		5EC5BC5D16A48B90008FE202 /* AFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFViewController.m; sourceTree = "<group>"; };
+		5EC5BC6016A48B90008FE202 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AFViewController.xib; sourceTree = "<group>"; };
+		5EC5BC6716A48B90008FE202 /* AFImageDownloaderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AFImageDownloaderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EC5BC6816A48B90008FE202 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5EC5BC7016A48B90008FE202 /* AFImageDownloaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AFImageDownloaderTests-Info.plist"; sourceTree = "<group>"; };
+		5EC5BC7216A48B90008FE202 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5EC5BC8216A48BD9008FE202 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "../../../../Library/Developer/Xcode/DerivedData/AFImageDownloader-adpzepnffesqvzazihcxbomlejoq/Build/Products/Debug-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
+		5EC5BC8416A48BFB008FE202 /* AFImageDownloaderInitializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloaderInitializationTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EC5BC3D16A48B8F008FE202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EC5BC4516A48B8F008FE202 /* UIKit.framework in Frameworks */,
+				5EC5BC4716A48B8F008FE202 /* Foundation.framework in Frameworks */,
+				5EC5BC4916A48B8F008FE202 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EC5BC6316A48B90008FE202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EC5BC8316A48BD9008FE202 /* libKiwi.a in Frameworks */,
+				5EC5BC6916A48B90008FE202 /* SenTestingKit.framework in Frameworks */,
+				5EC5BC6A16A48B90008FE202 /* UIKit.framework in Frameworks */,
+				5EC5BC6B16A48B90008FE202 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EC5BC3516A48B8F008FE202 = {
+			isa = PBXGroup;
+			children = (
+				5EC5BC4A16A48B8F008FE202 /* AFImageDownloader */,
+				5EC5BC6E16A48B90008FE202 /* AFImageDownloaderTests */,
+				5EC5BC4316A48B8F008FE202 /* Frameworks */,
+				5EC5BC4116A48B8F008FE202 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5EC5BC4116A48B8F008FE202 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EC5BC4016A48B8F008FE202 /* AFImageDownloader.app */,
+				5EC5BC6716A48B90008FE202 /* AFImageDownloaderTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EC5BC4316A48B8F008FE202 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EC5BC8216A48BD9008FE202 /* libKiwi.a */,
+				5EC5BC4416A48B8F008FE202 /* UIKit.framework */,
+				5EC5BC4616A48B8F008FE202 /* Foundation.framework */,
+				5EC5BC4816A48B8F008FE202 /* CoreGraphics.framework */,
+				5EC5BC6816A48B90008FE202 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5EC5BC4A16A48B8F008FE202 /* AFImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				5EC5BC5316A48B8F008FE202 /* AFAppDelegate.h */,
+				5EC5BC5416A48B8F008FE202 /* AFAppDelegate.m */,
+				5EC5BC5C16A48B90008FE202 /* AFViewController.h */,
+				5EC5BC5D16A48B90008FE202 /* AFViewController.m */,
+				5EC5BC5F16A48B90008FE202 /* AFViewController.xib */,
+				5EC5BC4B16A48B8F008FE202 /* Supporting Files */,
+			);
+			path = AFImageDownloader;
+			sourceTree = "<group>";
+		};
+		5EC5BC4B16A48B8F008FE202 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EC5BC4C16A48B8F008FE202 /* AFImageDownloader-Info.plist */,
+				5EC5BC4D16A48B8F008FE202 /* InfoPlist.strings */,
+				5EC5BC5016A48B8F008FE202 /* main.m */,
+				5EC5BC5216A48B8F008FE202 /* AFImageDownloader-Prefix.pch */,
+				5EC5BC5616A48B90008FE202 /* Default.png */,
+				5EC5BC5816A48B90008FE202 /* Default@2x.png */,
+				5EC5BC5A16A48B90008FE202 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5EC5BC6E16A48B90008FE202 /* AFImageDownloaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				5EC5BC8416A48BFB008FE202 /* AFImageDownloaderInitializationTests.m */,
+				5EC5BC6F16A48B90008FE202 /* Supporting Files */,
+			);
+			path = AFImageDownloaderTests;
+			sourceTree = "<group>";
+		};
+		5EC5BC6F16A48B90008FE202 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EC5BC7016A48B90008FE202 /* AFImageDownloaderTests-Info.plist */,
+				5EC5BC7116A48B90008FE202 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EC5BC3F16A48B8F008FE202 /* AFImageDownloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EC5BC7916A48B90008FE202 /* Build configuration list for PBXNativeTarget "AFImageDownloader" */;
+			buildPhases = (
+				5EC5BC3C16A48B8F008FE202 /* Sources */,
+				5EC5BC3D16A48B8F008FE202 /* Frameworks */,
+				5EC5BC3E16A48B8F008FE202 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AFImageDownloader;
+			productName = AFImageDownloader;
+			productReference = 5EC5BC4016A48B8F008FE202 /* AFImageDownloader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5EC5BC6616A48B90008FE202 /* AFImageDownloaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EC5BC7C16A48B90008FE202 /* Build configuration list for PBXNativeTarget "AFImageDownloaderTests" */;
+			buildPhases = (
+				5EC5BC6216A48B90008FE202 /* Sources */,
+				5EC5BC6316A48B90008FE202 /* Frameworks */,
+				5EC5BC6416A48B90008FE202 /* Resources */,
+				5EC5BC6516A48B90008FE202 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EC5BC6D16A48B90008FE202 /* PBXTargetDependency */,
+			);
+			name = AFImageDownloaderTests;
+			productName = AFImageDownloaderTests;
+			productReference = 5EC5BC6716A48B90008FE202 /* AFImageDownloaderTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EC5BC3716A48B8F008FE202 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AF;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Ash Furrow";
+			};
+			buildConfigurationList = 5EC5BC3A16A48B8F008FE202 /* Build configuration list for PBXProject "AFImageDownloader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5EC5BC3516A48B8F008FE202;
+			productRefGroup = 5EC5BC4116A48B8F008FE202 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EC5BC3F16A48B8F008FE202 /* AFImageDownloader */,
+				5EC5BC6616A48B90008FE202 /* AFImageDownloaderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EC5BC3E16A48B8F008FE202 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EC5BC4F16A48B8F008FE202 /* InfoPlist.strings in Resources */,
+				5EC5BC5716A48B90008FE202 /* Default.png in Resources */,
+				5EC5BC5916A48B90008FE202 /* Default@2x.png in Resources */,
+				5EC5BC5B16A48B90008FE202 /* Default-568h@2x.png in Resources */,
+				5EC5BC6116A48B90008FE202 /* AFViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EC5BC6416A48B90008FE202 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EC5BC7316A48B90008FE202 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EC5BC6516A48B90008FE202 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EC5BC3C16A48B8F008FE202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EC5BC5116A48B8F008FE202 /* main.m in Sources */,
+				5EC5BC5516A48B8F008FE202 /* AFAppDelegate.m in Sources */,
+				5EC5BC5E16A48B90008FE202 /* AFViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EC5BC6216A48B90008FE202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EC5BC8516A48BFB008FE202 /* AFImageDownloaderInitializationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5EC5BC6D16A48B90008FE202 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EC5BC3F16A48B8F008FE202 /* AFImageDownloader */;
+			targetProxy = 5EC5BC6C16A48B90008FE202 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5EC5BC4D16A48B8F008FE202 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EC5BC4E16A48B8F008FE202 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5EC5BC5F16A48B90008FE202 /* AFViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EC5BC6016A48B90008FE202 /* en */,
+			);
+			name = AFViewController.xib;
+			sourceTree = "<group>";
+		};
+		5EC5BC7116A48B90008FE202 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EC5BC7216A48B90008FE202 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5EC5BC7716A48B90008FE202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5EC5BC7816A48B90008FE202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EC5BC7A16A48B90008FE202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AFImageDownloader/AFImageDownloader-Prefix.pch";
+				INFOPLIST_FILE = "AFImageDownloader/AFImageDownloader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5EC5BC7B16A48B90008FE202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AFImageDownloader/AFImageDownloader-Prefix.pch";
+				INFOPLIST_FILE = "AFImageDownloader/AFImageDownloader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5EC5BC7D16A48B90008FE202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AFImageDownloader.app/AFImageDownloader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AFImageDownloader/AFImageDownloader-Prefix.pch";
+				INFOPLIST_FILE = "AFImageDownloaderTests/AFImageDownloaderTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/AFImageDownloader-adpzepnffesqvzazihcxbomlejoq/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/../Frameworks/Kiwi/Kiwi\"/**";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5EC5BC7E16A48B90008FE202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AFImageDownloader.app/AFImageDownloader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AFImageDownloader/AFImageDownloader-Prefix.pch";
+				INFOPLIST_FILE = "AFImageDownloaderTests/AFImageDownloaderTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/AFImageDownloader-adpzepnffesqvzazihcxbomlejoq/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/../Frameworks/Kiwi/Kiwi\"/**";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EC5BC3A16A48B8F008FE202 /* Build configuration list for PBXProject "AFImageDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EC5BC7716A48B90008FE202 /* Debug */,
+				5EC5BC7816A48B90008FE202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EC5BC7916A48B90008FE202 /* Build configuration list for PBXNativeTarget "AFImageDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EC5BC7A16A48B90008FE202 /* Debug */,
+				5EC5BC7B16A48B90008FE202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5EC5BC7C16A48B90008FE202 /* Build configuration list for PBXNativeTarget "AFImageDownloaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EC5BC7D16A48B90008FE202 /* Debug */,
+				5EC5BC7E16A48B90008FE202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5EC5BC3716A48B8F008FE202 /* Project object */;
+}
