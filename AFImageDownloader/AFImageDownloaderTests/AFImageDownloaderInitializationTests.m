@@ -6,11 +6,29 @@
 //  Copyright 2013 Ash Furrow. All rights reserved.
 //
 
-//#import "Kiwi/Kiwi.h"
-
 #import "Kiwi.h"
 
+#import "AFImageDownloader.h"
+
 SPEC_BEGIN(AFImageDownloaderInitializationTests)
+
+describe(@"Image Downloader", ^{
+    NSString *urlString = @"http://example.com/image.jpeg";
+    
+    context(@"when newly created with class method", ^{
+        it (@"should have the same url string", ^{
+            AFImageDownloader *imageDownloader = [AFImageDownloader imageDownloaderWithURLString:urlString];
+            [[imageDownloader.urlString should] equal:urlString];
+        });
+    });
+    
+    context(@"when newly created with initializer method", ^{
+        it (@"should have the same url string", ^{
+            AFImageDownloader *imageDownloader = [[AFImageDownloader alloc] initWithURLString:urlString];
+            [[imageDownloader.urlString should] equal:urlString];
+        });
+    });
+});
 
 SPEC_END
 

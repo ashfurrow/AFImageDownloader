@@ -24,6 +24,8 @@
 		5EC5BC7316A48B90008FE202 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EC5BC7116A48B90008FE202 /* InfoPlist.strings */; };
 		5EC5BC8316A48BD9008FE202 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC5BC8216A48BD9008FE202 /* libKiwi.a */; };
 		5EC5BC8516A48BFB008FE202 /* AFImageDownloaderInitializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC8416A48BFB008FE202 /* AFImageDownloaderInitializationTests.m */; };
+		5EC5BC8816A48D47008FE202 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC8716A48D47008FE202 /* AFImageDownloader.m */; };
+		5EC5BC8916A48D47008FE202 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC8716A48D47008FE202 /* AFImageDownloader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		5EC5BC7216A48B90008FE202 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5EC5BC8216A48BD9008FE202 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "../../../../Library/Developer/Xcode/DerivedData/AFImageDownloader-adpzepnffesqvzazihcxbomlejoq/Build/Products/Debug-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		5EC5BC8416A48BFB008FE202 /* AFImageDownloaderInitializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloaderInitializationTests.m; sourceTree = "<group>"; };
+		5EC5BC8616A48D47008FE202 /* AFImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = ../AFImageDownloader.h; sourceTree = "<group>"; };
+		5EC5BC8716A48D47008FE202 /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = ../AFImageDownloader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +93,9 @@
 		5EC5BC3516A48B8F008FE202 = {
 			isa = PBXGroup;
 			children = (
-				5EC5BC4A16A48B8F008FE202 /* AFImageDownloader */,
+				5EC5BC8616A48D47008FE202 /* AFImageDownloader.h */,
+				5EC5BC8716A48D47008FE202 /* AFImageDownloader.m */,
+				5EC5BC4A16A48B8F008FE202 /* Test Bed */,
 				5EC5BC6E16A48B90008FE202 /* AFImageDownloaderTests */,
 				5EC5BC4316A48B8F008FE202 /* Frameworks */,
 				5EC5BC4116A48B8F008FE202 /* Products */,
@@ -117,7 +123,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5EC5BC4A16A48B8F008FE202 /* AFImageDownloader */ = {
+		5EC5BC4A16A48B8F008FE202 /* Test Bed */ = {
 			isa = PBXGroup;
 			children = (
 				5EC5BC5316A48B8F008FE202 /* AFAppDelegate.h */,
@@ -127,6 +133,7 @@
 				5EC5BC5F16A48B90008FE202 /* AFViewController.xib */,
 				5EC5BC4B16A48B8F008FE202 /* Supporting Files */,
 			);
+			name = "Test Bed";
 			path = AFImageDownloader;
 			sourceTree = "<group>";
 		};
@@ -276,6 +283,7 @@
 				5EC5BC5116A48B8F008FE202 /* main.m in Sources */,
 				5EC5BC5516A48B8F008FE202 /* AFAppDelegate.m in Sources */,
 				5EC5BC5E16A48B90008FE202 /* AFViewController.m in Sources */,
+				5EC5BC8816A48D47008FE202 /* AFImageDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EC5BC8516A48BFB008FE202 /* AFImageDownloaderInitializationTests.m in Sources */,
+				5EC5BC8916A48D47008FE202 /* AFImageDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +422,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/AFImageDownloader-adpzepnffesqvzazihcxbomlejoq/Build/Products/Debug-iphoneos\"",
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				USER_HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/../Frameworks/Kiwi/Kiwi\"/**";
@@ -436,6 +446,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/AFImageDownloader-adpzepnffesqvzazihcxbomlejoq/Build/Products/Debug-iphoneos\"",
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				USER_HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/../Frameworks/Kiwi/Kiwi\"/**";
