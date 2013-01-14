@@ -28,7 +28,6 @@
 		5EC5BC8916A48D47008FE202 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC8716A48D47008FE202 /* AFImageDownloader.m */; };
 		5EC5BC8C16A49590008FE202 /* AFImageDownloaderStartingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC8A16A49590008FE202 /* AFImageDownloaderStartingTests.m */; };
 		5EC5BC8F16A49970008FE202 /* AFImageDownloaderCancellationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC8D16A49970008FE202 /* AFImageDownloaderCancellationTests.m */; };
-		5EC5BC9116A49B5E008FE202 /* AFImageDownlaoderConnectionDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC9016A49B5E008FE202 /* AFImageDownlaoderConnectionDelegateTests.m */; };
 		5EC5BC9216A49B5E008FE202 /* AFImageDownlaoderConnectionDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC9016A49B5E008FE202 /* AFImageDownlaoderConnectionDelegateTests.m */; };
 /* End PBXBuildFile section */
 
@@ -294,7 +293,6 @@
 				5EC5BC5516A48B8F008FE202 /* AFAppDelegate.m in Sources */,
 				5EC5BC5E16A48B90008FE202 /* AFViewController.m in Sources */,
 				5EC5BC8816A48D47008FE202 /* AFImageDownloader.m in Sources */,
-				5EC5BC9116A49B5E008FE202 /* AFImageDownlaoderConnectionDelegateTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

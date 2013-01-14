@@ -95,7 +95,10 @@
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    
+    if (connection == self.connection)
+    {
+        [self.mutableData appendData:data];
+    }
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection
