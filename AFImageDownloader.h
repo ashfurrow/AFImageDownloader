@@ -8,12 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum : NSUInteger {
+    AFImageDownloaderStateNotStarted,
+    AFImageDownloaderStateStarted,
+    AFImageDownloaderStateCompleted
+}AFImageDownloaderState;
+
 @interface AFImageDownloader : NSObject
 
 +(instancetype)imageDownloaderWithURLString:(NSString *)urlString;
 
 -(id)initWithURLString:(NSString *)urlString;
 
-@property (nonatomic, readonly, strong) NSString *urlString;
+@property (nonatomic, readonly) NSString *urlString;
+
+@property (nonatomic, readwrite) AFImageDownloaderState state;
 
 @end

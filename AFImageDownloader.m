@@ -20,6 +20,7 @@
     if (!(self = [super init])) return nil;
     
     _urlString = urlString;
+    _state = AFImageDownloaderStateNotStarted;
     
     return self;
 }
