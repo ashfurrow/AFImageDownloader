@@ -10,6 +10,9 @@
 
 @interface AFImageDownloader () <NSURLConnectionDataDelegate>
 
+@property (nonatomic, strong) NSURLConnection *connection;
+@property (nonatomic, strong) NSMutableData *mutableData;
+
 @end
 
 @implementation AFImageDownloader
@@ -65,11 +68,21 @@
 -(void)start
 {
     NSURLRequest *urlRequest = [self urlRequestForURLString];
-    NSURLConnection *connection = [self urlConnectionForURLRequest:urlRequest];
-    [connection start];
+    self.connection = [self urlConnectionForURLRequest:urlRequest];
+    self.mutableData = [NSMutableData data];
+    [self.connection start];
     
     [self willChangeValueForKey:@"state"];
     _state = AFImageDownloaderStateStarted;
+    [self didChangeValueForKey:@"state"];
+}
+
+-(void)cancel
+{
+    [self.connection cancel];
+    
+    [self willChangeValueForKey:@"state"];
+    _state = AFImageDownloaderStateCompleted;
     [self didChangeValueForKey:@"state"];
 }
 

@@ -29,6 +29,7 @@ typedef enum : NSUInteger {
 #pragma mark - Instance Methods
 
 -(void)start;
+-(void)cancel;
 
 #pragma mark - Properties
 
