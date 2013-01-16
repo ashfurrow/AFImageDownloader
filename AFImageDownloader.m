@@ -156,8 +156,10 @@ static NSMutableSet *activeImageDownloadRequests;
 {
     if (connection == self.connection)
     {
-        [self.mutableData af_decompressedImageFromJPEGDataWithCallback:self.completion];
-        [self setState:AFImageDownloaderStateCompleted];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [self.mutableData af_decompressedImageFromJPEGDataWithCallback:self.completion];
+            [self setState:AFImageDownloaderStateCompleted];
+        });
     }
 }
 
