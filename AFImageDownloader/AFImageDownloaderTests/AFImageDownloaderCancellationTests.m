@@ -15,6 +15,9 @@
 -(void)setState:(AFImageDownloaderState)state;
 -(void)setConnection:(NSURLConnection *)connection;
 
+@property (nonatomic, strong) NSURLConnection *connection;
+@property (nonatomic, strong) NSMutableData *mutableData;
+
 @end
 
 SPEC_BEGIN(AFImageDownloaderCancellationTests)
@@ -47,6 +50,14 @@ describe(@"Image downloader", ^{
             
             [imageDownloader cancel];  
         });
+        
+        it (@"should set the mutable data and connection to nil when completed.", ^{
+            [imageDownloader setState:AFImageDownloaderStateCompleted];
+            
+            [imageDownloader.connection shouldBeNil];
+            [imageDownloader.mutableData shouldBeNil];
+        });
+        
     });
 });
 

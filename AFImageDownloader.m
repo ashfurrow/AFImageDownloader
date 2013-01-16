@@ -100,6 +100,9 @@ static NSMutableSet *activeImageDownloadRequests;
     else if (state == AFImageDownloaderStateCompleted)
     {
         [self removeSelfFromActiveRequestsSet];
+        
+        self.mutableData = nil;
+        self.connection = nil;
     }
 }
 

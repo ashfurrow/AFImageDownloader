@@ -6,5 +6,3 @@ Downloads JPEG images asynchronously and decompresses them on a background threa
 ## TODOs
 
 1. Needs to turn JPEG into UIImage in background thread.
-2. Needs to set `connection` and `mutableData` to `nil` when being cancelled.
-
