@@ -30,6 +30,7 @@
 		5EC5BC8F16A49970008FE202 /* AFImageDownloaderCancellationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC8D16A49970008FE202 /* AFImageDownloaderCancellationTests.m */; };
 		5EC5BC9216A49B5E008FE202 /* AFImageDownloaderConnectionDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC9016A49B5E008FE202 /* AFImageDownloaderConnectionDelegateTests.m */; };
 		5EEFB5E616A6FBE3007F0863 /* AFImageDownloaderStateChangeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEFB5E516A6FBE2007F0863 /* AFImageDownloaderStateChangeTests.m */; };
+		5EEFB5EA16A70351007F0863 /* NSData+AFDecompression.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEFB5E916A70351007F0863 /* NSData+AFDecompression.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		5EC5BC8D16A49970008FE202 /* AFImageDownloaderCancellationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloaderCancellationTests.m; sourceTree = "<group>"; };
 		5EC5BC9016A49B5E008FE202 /* AFImageDownloaderConnectionDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloaderConnectionDelegateTests.m; sourceTree = "<group>"; };
 		5EEFB5E516A6FBE2007F0863 /* AFImageDownloaderStateChangeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloaderStateChangeTests.m; sourceTree = "<group>"; };
+		5EEFB5E816A70351007F0863 /* NSData+AFDecompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AFDecompression.h"; sourceTree = "<group>"; };
+		5EEFB5E916A70351007F0863 /* NSData+AFDecompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AFDecompression.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 			children = (
 				5EC5BC8616A48D47008FE202 /* AFImageDownloader.h */,
 				5EC5BC8716A48D47008FE202 /* AFImageDownloader.m */,
+				5EEFB5E816A70351007F0863 /* NSData+AFDecompression.h */,
+				5EEFB5E916A70351007F0863 /* NSData+AFDecompression.m */,
 				5EC5BC4A16A48B8F008FE202 /* Test Bed */,
 				5EC5BC6E16A48B90008FE202 /* AFImageDownloaderTests */,
 				5EC5BC4316A48B8F008FE202 /* Frameworks */,
@@ -296,6 +301,7 @@
 				5EC5BC5516A48B8F008FE202 /* AFAppDelegate.m in Sources */,
 				5EC5BC5E16A48B90008FE202 /* AFViewController.m in Sources */,
 				5EC5BC8816A48D47008FE202 /* AFImageDownloader.m in Sources */,
+				5EEFB5EA16A70351007F0863 /* NSData+AFDecompression.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
