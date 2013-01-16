@@ -58,6 +58,8 @@ NSInteger roundUp(NSInteger numToRound, NSInteger multiple)
         dispatch_async(dispatch_get_main_queue(), ^{
             callback(nil);
         });
+        
+        return;
     }
     
     // Create the colour space and an image buffer

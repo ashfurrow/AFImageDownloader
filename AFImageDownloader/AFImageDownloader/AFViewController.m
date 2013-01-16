@@ -8,6 +8,8 @@
 
 #import "AFViewController.h"
 
+#import "AFImageDownloader.h"
+
 @interface AFViewController ()
 
 @end
@@ -18,6 +20,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [AFImageDownloader imageDownloaderWithURLString:@"http://static.ashfurrow.com.s3.amazonaws.com/github/worked.jpg" autoStart:YES completion:^(UIImage *decompressedImage) {
+        self.imageView.image = decompressedImage;
+    }];
 }
 
 - (void)didReceiveMemoryWarning

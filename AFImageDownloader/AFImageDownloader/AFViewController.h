@@ -10,4 +10,6 @@
 
 @interface AFViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIImageView *imageView;
+
 @end
