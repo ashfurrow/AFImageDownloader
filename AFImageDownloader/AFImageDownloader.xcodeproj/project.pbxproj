@@ -72,8 +72,8 @@
 		5EC5BC8D16A49970008FE202 /* AFImageDownloaderCancellationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloaderCancellationTests.m; sourceTree = "<group>"; };
 		5EC5BC9016A49B5E008FE202 /* AFImageDownloaderConnectionDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloaderConnectionDelegateTests.m; sourceTree = "<group>"; };
 		5EEFB5E516A6FBE2007F0863 /* AFImageDownloaderStateChangeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloaderStateChangeTests.m; sourceTree = "<group>"; };
-		5EEFB5E816A70351007F0863 /* NSData+AFDecompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AFDecompression.h"; sourceTree = "<group>"; };
-		5EEFB5E916A70351007F0863 /* NSData+AFDecompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AFDecompression.m"; sourceTree = "<group>"; };
+		5EEFB5E816A70351007F0863 /* NSData+AFDecompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+AFDecompression.h"; path = "../NSData+AFDecompression.h"; sourceTree = "<group>"; };
+		5EEFB5E916A70351007F0863 /* NSData+AFDecompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+AFDecompression.m"; path = "../NSData+AFDecompression.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
