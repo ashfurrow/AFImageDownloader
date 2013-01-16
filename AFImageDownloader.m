@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSURLConnection *connection;
 @property (nonatomic, strong) NSMutableData *mutableData;
+@property (nonatomic, strong) AFJPEGWasDecompressedCallback completion;
 
 @end
 
@@ -33,24 +34,25 @@ static NSMutableSet *activeImageDownloadRequests;
 
 #pragma mark Creation Methods
 
-+(instancetype)imageDownloaderWithURLString:(NSString *)urlString
++(instancetype)imageDownloaderWithURLString:(NSString *)urlString completion:(AFJPEGWasDecompressedCallback)completion
 {
-    return [self imageDownloaderWithURLString:urlString autoStart:NO];
+    return [self imageDownloaderWithURLString:urlString autoStart:NO completion:completion];
 }
 
-+(instancetype)imageDownloaderWithURLString:(NSString *)urlString autoStart:(BOOL)startImmediately
++(instancetype)imageDownloaderWithURLString:(NSString *)urlString autoStart:(BOOL)startImmediately completion:(AFJPEGWasDecompressedCallback)completion
 {
-    return [[AFImageDownloader alloc] initWithURLString:urlString autoStart:startImmediately];
+    return [[AFImageDownloader alloc] initWithURLString:urlString autoStart:startImmediately completion:completion];
 }
 
 #pragma mark - Initializers
 
--(id)initWithURLString:(NSString *)urlString autoStart:(BOOL)startImmediately
+-(id)initWithURLString:(NSString *)urlString autoStart:(BOOL)startImmediately completion:(AFJPEGWasDecompressedCallback)completion
 {
     if (!(self = [super init])) return nil;
     
     _urlString = urlString;
     _state = AFImageDownloaderStateNotStarted;
+    _completion = [completion copy];
     
     if (startImmediately)
     {
@@ -60,9 +62,9 @@ static NSMutableSet *activeImageDownloadRequests;
     return self;
 }
 
--(id)initWithURLString:(NSString *)urlString
+-(id)initWithURLString:(NSString *)urlString completion:(AFJPEGWasDecompressedCallback)completion
 {
-    return [self initWithURLString:urlString autoStart:NO];
+    return [self initWithURLString:urlString autoStart:NO completion:completion];
 }
 
 #pragma mark - Private Helper Methods
@@ -154,6 +156,8 @@ static NSMutableSet *activeImageDownloadRequests;
 {
     if (connection == self.connection)
     {
+        [self.mutableData af_decompressedImageFromJPEGDataWithCallback:self.completion];
+        [self setState:AFImageDownloaderStateCompleted];
     }
 }
 

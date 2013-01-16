@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "NSData+AFDecompression.h"
+
 typedef enum : NSUInteger {
     AFImageDownloaderStateNotStarted,
     AFImageDownloaderStateStarted,
@@ -18,13 +20,13 @@ typedef enum : NSUInteger {
 
 #pragma mark - Convenience Class Creation Methods
 
-+(instancetype)imageDownloaderWithURLString:(NSString *)urlString;  // Defaults to not starting immediately
-+(instancetype)imageDownloaderWithURLString:(NSString *)urlString autoStart:(BOOL)startImmediately;
++(instancetype)imageDownloaderWithURLString:(NSString *)urlString completion:(AFJPEGWasDecompressedCallback)completion;  // Defaults to not starting immediately
++(instancetype)imageDownloaderWithURLString:(NSString *)urlString autoStart:(BOOL)startImmediately completion:(AFJPEGWasDecompressedCallback)completion;
 
 #pragma mark - Initializer Methods
 
--(id)initWithURLString:(NSString *)urlString;  // Defaults to not starting immediately
--(id)initWithURLString:(NSString *)urlString autoStart:(BOOL)startImmediately; // Designated initializer
+-(id)initWithURLString:(NSString *)urlString completion:(AFJPEGWasDecompressedCallback)completion;  // Defaults to not starting immediately
+-(id)initWithURLString:(NSString *)urlString autoStart:(BOOL)startImmediately completion:(AFJPEGWasDecompressedCallback)completion; // Designated initializer
 
 #pragma mark - Instance Methods
 

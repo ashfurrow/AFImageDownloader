@@ -28,7 +28,7 @@ describe(@"Image Downloader", ^{
     context(@"when newly created", ^{
         
         beforeEach(^{
-            imageDownloader = [AFImageDownloader imageDownloaderWithURLString:urlString];
+            imageDownloader = [AFImageDownloader imageDownloaderWithURLString:urlString completion:nil];
             NSURLConnection *urlConnectionMock = [NSURLConnection nullMock]; // A mock to avoid actually fetching from the Internet
             [imageDownloader setConnection:urlConnectionMock];
         });

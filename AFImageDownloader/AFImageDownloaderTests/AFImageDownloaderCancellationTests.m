@@ -28,7 +28,7 @@ describe(@"Image downloader", ^{
     
     context(@"has been newly created", ^{
         beforeEach(^{
-            imageDownloader = [[AFImageDownloader alloc] initWithURLString:urlString autoStart:NO];
+            imageDownloader = [[AFImageDownloader alloc] initWithURLString:urlString autoStart:NO completion:nil];
         });
         
         it (@"should call cancel on its URL Connection", ^{

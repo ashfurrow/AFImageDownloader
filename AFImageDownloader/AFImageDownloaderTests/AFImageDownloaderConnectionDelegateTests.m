@@ -12,6 +12,7 @@
 
 @interface AFImageDownloader (UnitTestAdditions)
 
+-(void)setCompletion:(AFJPEGWasDecompressedCallback)completion;
 -(void)setMutableData:(NSMutableData *)mutableData;
 -(void)setConnection:(NSURLConnection *)connection;
 
@@ -25,7 +26,7 @@ describe(@"Image downloader", ^{
     
     context(@"has been newly created", ^{
         beforeEach(^{
-            imageDownloader = (AFImageDownloader<NSURLConnectionDataDelegate> *)[[AFImageDownloader alloc] initWithURLString:urlString autoStart:NO];
+            imageDownloader = (AFImageDownloader<NSURLConnectionDataDelegate> *)[[AFImageDownloader alloc] initWithURLString:urlString autoStart:NO completion:nil];
         });
         
         it (@"should append data", ^{
@@ -69,6 +70,21 @@ describe(@"Image downloader", ^{
             
             [[imageDownloader should] receive:@selector(cancel)];
             [imageDownloader connection:mockConnection didReceiveResponse:mockResponse];
+        });
+        
+        it (@"should call the completion block when the URL connection completes.", ^{
+                        
+            NSURLConnection *mockConnection = [NSURLConnection mock];
+            [imageDownloader setConnection:mockConnection];
+            
+            NSMutableData *mockData = [NSMutableData dataWithLength:1];;
+            [imageDownloader setMutableData:mockData];
+            
+            [imageDownloader setCompletion:^(UIImage *decompressedImage) {
+                [decompressedImage shouldBeNil];
+            }];
+            
+            [imageDownloader connectionDidFinishLoading:mockConnection];
         });
     });
 });
