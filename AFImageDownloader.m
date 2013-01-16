@@ -24,8 +24,6 @@ static NSMutableSet *activeImageDownloadRequests;
 
 +(void)initialize
 {
-    [super initialize];
-    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         activeImageDownloadRequests = [NSMutableSet new];
