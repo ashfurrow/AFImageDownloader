@@ -57,6 +57,19 @@ describe(@"Image downloader", ^{
             
             [imageDownloader connection:otherConnection didReceiveData:testData];
         });
+        
+        it (@"should cancel itself upon receiving a non-200 HTTP responses", ^{
+            
+            NSURLConnection *mockConnection = [NSURLConnection mock];
+            [[mockConnection should] receive:@selector(cancel)];
+            [imageDownloader setConnection:mockConnection];
+            
+            NSHTTPURLResponse *mockResponse = [NSHTTPURLResponse mock];
+            [mockResponse stub:@selector(statusCode) andReturn:theValue(400)];
+            
+            [[imageDownloader should] receive:@selector(cancel)];
+            [imageDownloader connection:mockConnection didReceiveResponse:mockResponse];
+        });
     });
 });
 

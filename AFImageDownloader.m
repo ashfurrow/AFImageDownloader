@@ -126,7 +126,17 @@ static NSMutableSet *activeImageDownloadRequests;
 
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
+    if (connection != self.connection) return;
     
+    if ([response isKindOfClass:[NSHTTPURLResponse class]])
+    {
+        NSUInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+        
+        if (statusCode != 200)
+        {
+            [self cancel];
+        }
+    }
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
@@ -139,7 +149,9 @@ static NSMutableSet *activeImageDownloadRequests;
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    
+    if (connection == self.connection)
+    {
+    }
 }
 
 @end
