@@ -28,7 +28,8 @@
 		5EC5BC8916A48D47008FE202 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC8716A48D47008FE202 /* AFImageDownloader.m */; };
 		5EC5BC8C16A49590008FE202 /* AFImageDownloaderStartingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC8A16A49590008FE202 /* AFImageDownloaderStartingTests.m */; };
 		5EC5BC8F16A49970008FE202 /* AFImageDownloaderCancellationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC8D16A49970008FE202 /* AFImageDownloaderCancellationTests.m */; };
-		5EC5BC9216A49B5E008FE202 /* AFImageDownlaoderConnectionDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC9016A49B5E008FE202 /* AFImageDownlaoderConnectionDelegateTests.m */; };
+		5EC5BC9216A49B5E008FE202 /* AFImageDownloaderConnectionDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5BC9016A49B5E008FE202 /* AFImageDownloaderConnectionDelegateTests.m */; };
+		5EEFB5E616A6FBE3007F0863 /* AFImageDownloaderStateChangeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEFB5E516A6FBE2007F0863 /* AFImageDownloaderStateChangeTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +69,8 @@
 		5EC5BC8716A48D47008FE202 /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = ../AFImageDownloader.m; sourceTree = "<group>"; };
 		5EC5BC8A16A49590008FE202 /* AFImageDownloaderStartingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloaderStartingTests.m; sourceTree = "<group>"; };
 		5EC5BC8D16A49970008FE202 /* AFImageDownloaderCancellationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloaderCancellationTests.m; sourceTree = "<group>"; };
-		5EC5BC9016A49B5E008FE202 /* AFImageDownlaoderConnectionDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownlaoderConnectionDelegateTests.m; sourceTree = "<group>"; };
+		5EC5BC9016A49B5E008FE202 /* AFImageDownloaderConnectionDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloaderConnectionDelegateTests.m; sourceTree = "<group>"; };
+		5EEFB5E516A6FBE2007F0863 /* AFImageDownloaderStateChangeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloaderStateChangeTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +165,8 @@
 				5EC5BC8416A48BFB008FE202 /* AFImageDownloaderInitializationTests.m */,
 				5EC5BC8A16A49590008FE202 /* AFImageDownloaderStartingTests.m */,
 				5EC5BC8D16A49970008FE202 /* AFImageDownloaderCancellationTests.m */,
-				5EC5BC9016A49B5E008FE202 /* AFImageDownlaoderConnectionDelegateTests.m */,
+				5EC5BC9016A49B5E008FE202 /* AFImageDownloaderConnectionDelegateTests.m */,
+				5EEFB5E516A6FBE2007F0863 /* AFImageDownloaderStateChangeTests.m */,
 				5EC5BC6F16A48B90008FE202 /* Supporting Files */,
 			);
 			path = AFImageDownloaderTests;
@@ -304,7 +307,8 @@
 				5EC5BC8916A48D47008FE202 /* AFImageDownloader.m in Sources */,
 				5EC5BC8C16A49590008FE202 /* AFImageDownloaderStartingTests.m in Sources */,
 				5EC5BC8F16A49970008FE202 /* AFImageDownloaderCancellationTests.m in Sources */,
-				5EC5BC9216A49B5E008FE202 /* AFImageDownlaoderConnectionDelegateTests.m in Sources */,
+				5EC5BC9216A49B5E008FE202 /* AFImageDownloaderConnectionDelegateTests.m in Sources */,
+				5EEFB5E616A6FBE3007F0863 /* AFImageDownloaderStateChangeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +489,7 @@
 				5EC5BC7B16A48B90008FE202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5EC5BC7C16A48B90008FE202 /* Build configuration list for PBXNativeTarget "AFImageDownloaderTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +498,7 @@
 				5EC5BC7E16A48B90008FE202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -17,7 +17,21 @@
 
 @implementation AFImageDownloader
 
-#pragma mark - Class Creation Methods
+static NSMutableSet *activeImageDownloadRequests;
+
+#pragma mark - Class Methods
+
++(void)initialize
+{
+    [super initialize];
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        activeImageDownloadRequests = [NSMutableSet new];
+    });
+}
+
+#pragma mark Creation Methods
 
 +(instancetype)imageDownloaderWithURLString:(NSString *)urlString
 {
@@ -63,6 +77,32 @@
     return [NSURLRequest requestWithURL:[NSURL URLWithString:self.urlString]];
 }
 
+-(void)addSelfToActiveRequestsSet
+{
+    [activeImageDownloadRequests addObject:self];
+}
+
+-(void)removeSelfFromActiveRequestsSet
+{
+    [activeImageDownloadRequests removeObject:self];
+}
+
+-(void)setState:(AFImageDownloaderState)state
+{
+    [self willChangeValueForKey:@"state"];
+    _state = state;
+    [self didChangeValueForKey:@"state"];
+    
+    if (state == AFImageDownloaderStateStarted)
+    {
+        [self addSelfToActiveRequestsSet];
+    }
+    else if (state == AFImageDownloaderStateCompleted)
+    {
+        [self removeSelfFromActiveRequestsSet];
+    }
+}
+
 #pragma mark - Public Methods
 
 -(void)start
@@ -72,18 +112,14 @@
     self.mutableData = [NSMutableData data];
     [self.connection start];
     
-    [self willChangeValueForKey:@"state"];
-    _state = AFImageDownloaderStateStarted;
-    [self didChangeValueForKey:@"state"];
+    [self setState:AFImageDownloaderStateStarted];
 }
 
 -(void)cancel
 {
     [self.connection cancel];
     
-    [self willChangeValueForKey:@"state"];
-    _state = AFImageDownloaderStateCompleted;
-    [self didChangeValueForKey:@"state"];
+    [self setState:AFImageDownloaderStateCompleted];
 }
 
 #pragma mark - NSURLConnectionDataDelegate Methods

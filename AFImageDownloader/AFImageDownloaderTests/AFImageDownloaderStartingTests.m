@@ -12,6 +12,7 @@
 
 @interface AFImageDownloader (UnitTestAdditions)
 
+-(void)setState:(AFImageDownloaderState)state;
 -(NSURLRequest *)urlRequestForURLString;
 -(NSURLConnection *)urlConnectionForURLRequest:(NSURLRequest *)request;
 
@@ -41,11 +42,17 @@ describe(@"Image downloader", ^{
         });
         
         it (@"should start the new URL connection", ^{
+            
+            [imageDownloader start];
+        });
+        
+        it (@"should be set it state to started when started", ^{
             NSURLConnection *urlConnectionMock = [NSURLConnection mock];
             [[urlConnectionMock should] receive:@selector(start)];
             
             [imageDownloader stub:@selector(urlConnectionForURLRequest:) andReturn:urlConnectionMock];
             
+            [[imageDownloader should] receive:@selector(setState:) withArguments:theValue(AFImageDownloaderStateStarted), nil];
             [imageDownloader start];
         });
     });

@@ -17,7 +17,7 @@
 
 @end
 
-SPEC_BEGIN(AFImageDownlaoderConnectionDelegateTests)
+SPEC_BEGIN(AFImageDownloaderConnectionDelegateTests)
 
 describe(@"Image downloader", ^{
     NSString *urlString = @"http://example.com/image.jpeg";

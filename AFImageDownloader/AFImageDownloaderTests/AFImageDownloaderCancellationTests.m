@@ -12,6 +12,7 @@
 
 @interface AFImageDownloader (UnitTestAdditions)
 
+-(void)setState:(AFImageDownloaderState)state;
 -(void)setConnection:(NSURLConnection *)connection;
 
 @end
@@ -35,6 +36,16 @@ describe(@"Image downloader", ^{
             [imageDownloader cancel];
             
             [[theValue(imageDownloader.state) should] equal:@(AFImageDownloaderStateCompleted)];
+        });
+        
+        it (@"should set its state to completed when cancelled", ^{
+            NSURLConnection *urlConnectionMock = [NSURLConnection mock];
+            [[urlConnectionMock should] receive:@selector(cancel)];
+            [imageDownloader setConnection:urlConnectionMock];
+            
+            [[imageDownloader should] receive:@selector(setState:) withArguments:theValue(AFImageDownloaderStateCompleted), nil];
+            
+            [imageDownloader cancel];  
         });
     });
 });
