@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = '1.0.0'
   s.summary      = 'Downloads JPEG images asynchronously and decompresses them on a background thread.'
   s.author       = { 'Ash Furrow' => 'ash@ashfurrow.com' }
-  s.source       = { :git => 'https://github.com/AshFurrow/AFImageDownloader.git', :tag => '1.0.1' }
+  s.source       = { :git => 'https://github.com/AshFurrow/AFImageDownloader.git', :tag => '1.0.0' }
   s.source_files = 'Classes', '*.{h,m}'
   s.license	     = 'MIT'
   s.homepage     = 'https://github.com/AshFurrow/AFImageDownloader'
