@@ -40,7 +40,7 @@ describe(@"Image Downloader", ^{
     context(@"when newly created with initializer method", ^{
         
         beforeEach(^{
-            imageDownloader = [AFImageDownloader imageDownloaderWithURLString:urlString completion:nil];
+            imageDownloader = [[AFImageDownloader alloc] initWithURLString:urlString autoStart:NO completion:nil];
         });
         
         it (@"should have the same url string", ^{
