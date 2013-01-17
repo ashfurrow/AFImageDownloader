@@ -8,4 +8,6 @@ Pod::Spec.new do |s|
   s.license	     = 'MIT'
   s.homepage     = 'https://github.com/AshFurrow/AFImageDownloader'
   s.dependency    'Kiwi', '~> 1.1.1'
+  s.platform     = :ios, '5.0'
+  s.license      = 'MIT'
 end
