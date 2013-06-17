@@ -55,6 +55,8 @@ NSInteger roundUp(NSInteger numToRound, NSInteger multiple)
 	
     if (width == 0 || height == 0)
     {
+        CGImageRelease(image);
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             callback(nil);
         });
