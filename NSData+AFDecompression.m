@@ -29,8 +29,10 @@ NSInteger roundUp(NSInteger numToRound, NSInteger multiple)
 
 -(void)af_decompressedImageFromJPEGDataWithCallback:(AFJPEGWasDecompressedCallback)callback
 {
-    uint8_t character;
-    [self getBytes:&character length:1];
+    uint8_t character = '\0';
+    if (self.length > 0) {
+        [self getBytes:&character length:1];
+    }
     
     if (character != 0xFF)
     {
