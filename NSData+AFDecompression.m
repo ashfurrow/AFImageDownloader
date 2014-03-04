@@ -37,7 +37,9 @@ NSInteger roundUp(NSInteger numToRound, NSInteger multiple)
     if (character != 0xFF)
     {
         // This is not a valid JPEG.
-        callback(nil);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            callback(nil);
+        });
         
         return;
     }
